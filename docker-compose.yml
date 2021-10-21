@@ -1,0 +1,9 @@
+version: "3.6"
+services:
+  app:
+    image: quanbd123/quangostudio:v1
+    ports:
+        - "${PUBLIC_PORT}:${PORT}"
+    restart: unless-stopped
+    environment:
+        PORT: ${PORT}
